@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed — SDK
+- SDK v2: declare extraction protocol 2.0. The analyzer pins an explicit
+  `EXTRACTION_PROTOCOL_VERSION = "2.0"` (class attribute, re-exported from the
+  package) and requires `attackmap>=1.5.1,<2.0.0`. Plugins written against
+  protocol 1.0 keep loading via the core v1 adapter.
+
 ## [0.2.1] - 2026-11-14
 
 ### Changed — packaging

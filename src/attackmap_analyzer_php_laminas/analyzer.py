@@ -110,6 +110,11 @@ class PhpLaminasAnalyzer:
         enabled_by_default=False,
     )
 
+    # SDK v2 (AC-403): explicitly declare extraction protocol 2.0. Plugins
+    # written against protocol 1.0 still load — the core v1 adapter lifts
+    # their ScanResult into the v2 ExtractionResult container.
+    EXTRACTION_PROTOCOL_VERSION = "2.0"
+
     @property
     def name(self) -> str:
         return self.metadata.name
